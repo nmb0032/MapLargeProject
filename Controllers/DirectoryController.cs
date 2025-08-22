@@ -126,4 +126,20 @@ public class DirectoryController : ControllerBase
         }
     }
 
+    [HttpDelete("delete")]
+    public IActionResult Delete(string path)
+    {
+        try
+        {
+            string decodedPath = WebUtility.UrlDecode(path);
+            _directoryService.DeleteFile(decodedPath);
+            return Ok(new { message = "File deleted successfully." });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error deleting file: {Path}", path);
+            return StatusCode(500, "An error occurred while deleting the file.");
+        }
+    }
+
 }

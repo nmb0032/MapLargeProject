@@ -8,4 +8,6 @@ public interface IDirectoryService
     FileInfo GetFileForDownload(string path);
 
     string GetSavePath(string? subPath, string fileName);
+
+    void DeleteFile(string path);
 }

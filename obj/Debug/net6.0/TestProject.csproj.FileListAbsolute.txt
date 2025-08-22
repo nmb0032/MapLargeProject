@@ -26,3 +26,4 @@ C:\Users\nickb\Workspace\map-large-project\obj\Debug\net6.0\refint\TestProject.d
 C:\Users\nickb\Workspace\map-large-project\obj\Debug\net6.0\TestProject.pdb
 C:\Users\nickb\Workspace\map-large-project\obj\Debug\net6.0\TestProject.genruntimeconfig.cache
 C:\Users\nickb\Workspace\map-large-project\obj\Debug\net6.0\ref\TestProject.dll
+C:\Users\nickb\Workspace\map-large-project\obj\Debug\net6.0\TestProject.sourcelink.json

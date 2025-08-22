@@ -10,7 +10,6 @@
     <div class="container">
       <h1>File Browser</h1>
       <div class="toolbar">
-        <!-- New search area -->
         <div class="search-area">
           <input
             type="search"
@@ -22,23 +21,15 @@
         </div>
         <div class="upload-area">
           <h3>Upload Files</h3>
-          <!-- The form for handling file uploads -->
           <form id="upload-form">
-            <!-- The file input field. 'multiple' allows selecting more than one file -->
             <input type="file" id="file-input" name="files" multiple />
             <button type="submit">Upload</button>
           </form>
-          <!-- A message area to show upload status or errors -->
           <p id="upload-message"></p>
         </div>
       </div>
-      <!-- This heading will display the current path being viewed -->
       <h2 id="current-path">/</h2>
-      <!-- This div is the main container for the list of files and folders -->
-      <div id="file-list">
-        <!-- Items will be rendered here by JS -->
-      </div>
-      <!-- This div shows summary information about the current directory -->
+      <div id="file-list"></div>
       <div class="summary">
         <p>
           Total Items: <span id="total-count">0</span> | Total Size:

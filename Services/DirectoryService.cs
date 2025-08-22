@@ -127,4 +127,25 @@ public class DirectoryService : IDirectoryService
 
         return Path.Combine(_rootDirectory, subPath, fileName);
     }
+
+    public void DeleteFile(string subPath)
+    {
+        string fullPath = Path.Combine(_rootDirectory, subPath);
+
+        if (!fullPath.StartsWith(_rootDirectory, StringComparison.OrdinalIgnoreCase))
+        {
+            throw new UnauthorizedAccessException("Access to the specified path is denied.");
+        }
+
+        if (File.Exists(fullPath))
+        {
+            File.Delete(fullPath);
+        }
+        else
+        {
+            throw new FileNotFoundException("The specified file does not exist.", fullPath);
+        }
+    }
+
+
 }
