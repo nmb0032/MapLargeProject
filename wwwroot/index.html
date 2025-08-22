@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Browser</title>
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>File Browser</h1>
+      <div class="toolbar">
+        <!-- New search area -->
+        <div class="search-area">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search files..."
+          />
+          <button id="search-button">Search</button>
+          <button id="clear-search-button">Clear</button>
+        </div>
+        <div class="upload-area">
+          <h3>Upload Files</h3>
+          <!-- The form for handling file uploads -->
+          <form id="upload-form">
+            <!-- The file input field. 'multiple' allows selecting more than one file -->
+            <input type="file" id="file-input" name="files" multiple />
+            <button type="submit">Upload</button>
+          </form>
+          <!-- A message area to show upload status or errors -->
+          <p id="upload-message"></p>
+        </div>
+      </div>
+      <!-- This heading will display the current path being viewed -->
+      <h2 id="current-path">/</h2>
+      <!-- This div is the main container for the list of files and folders -->
+      <div id="file-list">
+        <!-- Items will be rendered here by JS -->
+      </div>
+      <!-- This div shows summary information about the current directory -->
+      <div class="summary">
+        <p>
+          Total Items: <span id="total-count">0</span> | Total Size:
+          <span id="total-size">0</span> bytes
+        </p>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
